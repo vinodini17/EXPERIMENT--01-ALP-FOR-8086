@@ -1,8 +1,9 @@
 # EXPERIMENT--01-ALP-FOR-8086
-Name : VINODINI R
-Roll no : 212223040244
-Date of experiment : 11/03/2025
-
+```
+Name :VINODINI R
+Roll no :212223040244
+Date of experiment :11-03-2025
+```
 
 
 
@@ -76,52 +77,92 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 
 ## Programs for arithmetic  operations
+
+## Addition,Subtraction,Multiplication,Division  of 2byte ALP
 ```
-; You may customize this and other start-up templates; 
-; The location of this template is c:\emu8086\inc\0_com_template.txt
+org 100h 
+MOV AX,1122H
+MOV BX,2233H
+ADD AX,BX 
+MOV [6000H],AX
+     
+     ;DIRECT ADDR MODE
+MOV AX,[5000H]
+MOV BX,[5002H]  ;2 BYTE ADDR
+MOV AX,BX
+MOV [6010H],AX
 
+;REGISTER ADDR MODE  
+MOV BX,4444H
+MOV AX,BX
+MOV CX,3333H
+MOV DX,CX
+MUL DX
+MOV [6020H],AX
+
+;INDIRECT ADDR MODE   
+MOV BX,5005H
+MOV AX,[BX] 
+MOV CX,01H
+DIV CX      
+MOV [6030H],AX
+ret
+```
+## Output  
+
+![Screenshot 2025-03-11 104319](https://github.com/user-attachments/assets/d77d5120-dd43-4fc9-92b0-1056f8e968f7)
+
+## Logical AND
+```
 org 100h
+MOV AL,33H
+MOV BL,44H
+AND AL,BL
+ret
+```
+## OUTPUT
 
-; add your code here
-mov ax ,0155h
-add ax ,0133h
-mov [6000h],ax
+![Screenshot 2025-03-11 110452](https://github.com/user-attachments/assets/f7538ce5-2549-4c89-89a1-1005136335d4)
 
+## Logical OR
 
-mov ax,[5000h]
-sub ax,[5002h]
-mov [6010h],ax 
-
-
-mov ax,0117h
-mov bx,0116h
-mul bx
-mov [6020h],ax 
-
- 
-mov bx, 0055h 
-mov ax,[bx]
-mov cx,0005h  
-div cx        
-mov [6030h], ax
-
-
+```
+org 100h
+MOV AL,45H
+MOV BL,66H
+OR AL,BL
 ret
 ```
 
-## Output  
-![image](https://github.com/user-attachments/assets/2cb9b9a7-dd37-4c5e-a6b3-024077b5cdd2)
+## OUTPUT
+
+![Screenshot 2025-03-11 110741](https://github.com/user-attachments/assets/7611c6d2-4bee-4cdb-9b1c-952da512cac9)
+
+## Logical NOT
+
+```
+org 100h
+MOV AL,65H
+NOT AL
+ret
+```
+## OUTPUT
+
+![Screenshot 2025-03-11 111106](https://github.com/user-attachments/assets/72f9d94c-e782-4667-8eed-3c543e9bbb8e)
+
+## Logical XOR
+
+```
+org 100h
+MOV AL,66H
+MOV BL,77H
+XOR AL,BL
+ret
+```
+## OUTPUT
+
+![Screenshot 2025-03-11 111507](https://github.com/user-attachments/assets/52aa1b73-fc0a-4493-ab5c-5e71e912fcd3)
 
 
 ## Result :
 The execution of ALP on fundamental arithmetic and logical operations is successfully completed.
-
-
-
-
-
-
-
-
-
-
