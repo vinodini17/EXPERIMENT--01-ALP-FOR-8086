@@ -1,7 +1,7 @@
 # EXPERIMENT--01-ALP-FOR-8086
-Name :
-Roll no 
-Date of experiment :
+Name : VINODINI R
+Roll no : 212223040244
+Date of experiment : 11/03/2025
 
 
 
@@ -76,27 +76,47 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 
 ## Programs for arithmetic  operations
+```
+; You may customize this and other start-up templates; 
+; The location of this template is c:\emu8086\inc\0_com_template.txt
 
-## Addition  of 8 bit ALP 
+org 100h
+
+; add your code here
+mov ax ,0155h
+add ax ,0133h
+mov [6000h],ax
 
 
+mov ax,[5000h]
+sub ax,[5002h]
+mov [6010h],ax 
 
-## Output  
+
+mov ax,0117h
+mov bx,0116h
+mul bx
+mov [6020h],ax 
+
  
-## Subtraction   of 8 bit numbers  ALP 
- 
+mov bx, 0055h 
+mov ax,[bx]
+mov cx,0005h  
+div cx        
+mov [6030h], ax
+
+
+ret
+```
+
 ## Output  
-## Multiplication alp 
- ## Output  
-
-
-## Division alp 
-
-## Output  
+![image](https://github.com/user-attachments/assets/2cb9b9a7-dd37-4c5e-a6b3-024077b5cdd2)
 
 
 ## Result :
- 
+The execution of ALP on fundamental arithmetic and logical operations is successfully completed.
+
+
 
 
 
